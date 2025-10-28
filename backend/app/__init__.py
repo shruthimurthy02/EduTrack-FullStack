@@ -1,0 +1,3 @@
+"""
+EduTrack Backend Application
+"""
