@@ -3,6 +3,7 @@
  */
 
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { updateTask, deleteTask } from "../services/api";
 
 const TaskCard = ({ task, onTaskUpdated }) => {
@@ -109,7 +110,8 @@ const TaskCard = ({ task, onTaskUpdated }) => {
   };
 
   return (
-    <div
+    <motion.div
+      whileHover={{ y: -3 }}
       className={`bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-all duration-300 ${
         task.completed ? "opacity-75" : ""
       }`}
@@ -261,8 +263,10 @@ const TaskCard = ({ task, onTaskUpdated }) => {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 export default TaskCard;
+
+

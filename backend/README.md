@@ -205,3 +205,5 @@ If you encounter database-related errors, delete the `edutrack.db` file and rest
 
 This project is part of the EduTrack application suite.
 
+
+

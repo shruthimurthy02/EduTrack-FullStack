@@ -19,22 +19,10 @@ const Header = ({ activeTab, setActiveTab }) => {
         <div className="flex items-center justify-between py-4">
           {/* Logo and Branding */}
           <div className="flex items-center space-x-3">
-            <div className="bg-white p-2.5 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <svg
-                className="w-10 h-10 text-[#004AAD]"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-              </svg>
-            </div>
+            <img src="/i2_global_logo.png" alt="i2 Global" className="w-10 h-10 rounded-lg shadow bg-white p-1.5" />
             <div>
-              <h1 className="text-2xl font-bold text-white tracking-tight">
-                EduTrack LMS
-              </h1>
-              <p className="text-blue-100 text-xs font-medium">
-                i2Global • Task Management Platform
-              </p>
+              <h1 className="text-2xl font-bold text-white tracking-tight">EduTrack – i2 Global</h1>
+              <p className="text-blue-100 text-xs font-medium">Student-first, bright and modern LMS</p>
             </div>
           </div>
 

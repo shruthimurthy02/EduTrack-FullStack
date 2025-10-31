@@ -1,118 +1,67 @@
-# 🎓 EduTrack – Smart Learning Task Manager
+# 🎓 EduTrack – Full Stack Task Management System
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Frontend-React%20%2B%20Vite-blue?style=for-the-badge&logo=react" alt="React Badge"/>
-  <img src="https://img.shields.io/badge/Backend-FastAPI-green?style=for-the-badge&logo=fastapi" alt="FastAPI Badge"/>
-  <img src="https://img.shields.io/badge/Database-SQLite-blueviolet?style=for-the-badge&logo=sqlite" alt="SQLite Badge"/>
-  <img src="https://img.shields.io/badge/Styling-TailwindCSS-38B2AC?style=for-the-badge&logo=tailwindcss" alt="Tailwind Badge"/>
-  <img src="https://img.shields.io/badge/Code%20Quality-Black%20%26%20Prettier-yellow?style=for-the-badge&logo=codefactor" alt="Code Quality Badge"/>
-</p>
+EduTrack is a modern, school-themed task management platform designed for students and teachers to manage, track, and organize academic tasks efficiently.
 
 ---
 
-## 🚀 Overview
-
-**EduTrack** is a full-stack productivity and learning management app designed for the **i2Global** ecosystem.  
-It combines task management, teacher planning, and analytics visualization into one modern platform — built with **React + FastAPI**.
-
----
-
-## 🧩 Features
-
-- 🎯 **Student Task Tracker** – Add, edit, delete, and mark tasks as complete  
-- 🧑‍🏫 **Teacher Planner** – Manage lessons and assignment schedules  
-- 📚 **Assignment Tracker** – Track student work progress  
-- 📊 **Analytics Dashboard** – View insights with charts  
-- ⚡ **RESTful API** – Smooth front–back communication using Axios  
-- 🧠 **Clean Architecture** – Modular backend and reusable frontend components  
-- 🧰 **Auto-Formatting** – Code formatted with Black (Python) and Prettier (JS)
+## 🚀 Features
+- ✅ Create, Read, Update, Delete (CRUD) tasks  
+- 🎨 Modern responsive UI using **React + Tailwind CSS + Framer Motion**  
+- 📘 Role-based task creation (Student / Teacher)  
+- 🪄 Smooth animations, transitions, and hover effects  
+- 🕐 Task status tracking (Pending, Completed, Submitted)  
+- 🌐 Backend powered by **FastAPI**  
+- 💾 SQLite database integration  
 
 ---
 
-## 🧱 Tech Stack
-
-| Layer | Technology |
-|-------|-------------|
-| **Frontend** | React (Vite), Tailwind CSS, Axios |
-| **Backend** | FastAPI, SQLAlchemy |
-| **Database** | SQLite (for demo/testing) |
-| **Tools** | Cursor, VS Code, Prettier, Black |
-
----
-
-## 🗂️ Folder Structure
-
-EduTrack-FullStack/
-├── backend/
-│ ├── app/
-│ │ ├── main.py
-│ │ ├── models.py
-│ │ ├── routes/
-│ │ ├── schemas.py
-│ │ └── database.py
-│ └── requirements.txt
-├── frontend/
-│ ├── src/
-│ │ ├── components/
-│ │ ├── pages/
-│ │ ├── services/
-│ │ ├── App.jsx
-│ │ └── main.jsx
-│ ├── public/
-│ └── package.json
-└── README.md
-
-yaml
-Copy code
+## 🧠 Tech Stack
+**Frontend:** React, Tailwind CSS, Framer Motion, Axios, Vite  
+**Backend:** FastAPI, SQLAlchemy, Pydantic  
+**Database:** SQLite  
+**Version Control:** Git & GitHub  
 
 ---
 
 ## ⚙️ Setup Instructions
 
-### 🧩 Backend (FastAPI)
-
+### 1️⃣ Backend Setup
 ```bash
 cd backend
 pip install -r requirements.txt
 uvicorn main:app --reload
-➡ Runs on: http://127.0.0.1:8000
-➡ Swagger Docs: /docs
-➡ ReDoc: /redoc
 
-⚛️ Frontend (React)
-bash
-Copy code
+➡️ Visit API Docs → http://127.0.0.1:8000/docs
+
+2️⃣ Frontend Setup
 cd frontend
 npm install
 npm run dev
-➡ Runs on: http://localhost:5173
 
-🧾 API Endpoints
+
+➡️ Open the Frontend → http://localhost:5173
+
+🧩 API Endpoints
 Method	Endpoint	Description
-GET	/tasks	Fetch all tasks
-POST	/tasks	Create a new task
-PUT	/tasks/{id}	Update a specific task
-DELETE	/tasks/{id}	Delete a task
+POST	/tasks	Create new task
+GET	/tasks	Get all tasks
+PUT	/tasks/{id}	Update task
+DELETE	/tasks/{id}	Delete task
+🪶 Design Highlights
 
-💅 Code Quality
-✅ Python formatted with Black
-✅ JavaScript formatted with Prettier
-✅ Modular folder structure
-✅ Fully CORS-enabled API
-✅ No console or linter errors
+Soft academic color palette (blue, yellow, white, navy)
 
-🧭 Development Tools Used
-Tool	Purpose
-🧠 Cursor	AI-assisted scaffolding for backend/frontend
-💻 VS Code	Final testing, debugging, and formatting
-🎨 TailwindCSS	Responsive and modern UI styling
-📊 Swagger UI	API testing and documentation
+i2 Global logo integrated in header
 
-📸 Screenshots
-Add images under frontend/public/screenshots/ and reference them here.
+Responsive layout with smooth fade-in animations
 
-🏠 Dashboard Overview
+Cards with soft shadows & rounded edges
 
-👩‍💻 Author
+Elegant, school-friendly Poppins typography
+
+Subtle hover transitions & interactive animations using Framer Motion
+
+🧾 Author
+
 Shruthi M
-Full-Stack Developer Candidate – Technical Assessment (i2Global)
+GitHub: https://github.com/shruthimurthy02/EduTrack-FullStack

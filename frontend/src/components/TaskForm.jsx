@@ -52,7 +52,7 @@ const TaskForm = ({ onTaskAdded }) => {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-md p-6 mb-6">
+    <div className="card-soft p-6 mb-6">
       <h2 className="text-2xl font-bold text-gray-800 mb-4">Create New Task</h2>
 
       {error && (
@@ -86,7 +86,7 @@ const TaskForm = ({ onTaskAdded }) => {
             value={formData.title}
             onChange={handleChange}
             required
-            className="input input-bordered w-full"
+            className="input input-bordered w-full input-glow"
             placeholder="Enter task title"
           />
         </div>
@@ -101,7 +101,7 @@ const TaskForm = ({ onTaskAdded }) => {
             value={formData.description}
             onChange={handleChange}
             rows="3"
-            className="textarea textarea-bordered w-full"
+            className="textarea textarea-bordered w-full input-glow"
             placeholder="Enter task description"
           />
         </div>
@@ -117,7 +117,7 @@ const TaskForm = ({ onTaskAdded }) => {
               value={formData.role}
               onChange={handleChange}
               required
-              className="select select-bordered w-full"
+              className="select select-bordered w-full input-glow"
             >
               <option value="student">Student</option>
               <option value="teacher">Teacher</option>
@@ -133,7 +133,7 @@ const TaskForm = ({ onTaskAdded }) => {
               value={formData.category}
               onChange={handleChange}
               required
-              className="select select-bordered w-full"
+              className="select select-bordered w-full input-glow"
             >
               <option value="lesson_plan">Lesson Plan</option>
               <option value="assignment">Assignment</option>
@@ -153,7 +153,7 @@ const TaskForm = ({ onTaskAdded }) => {
               name="due_date"
               value={formData.due_date}
               onChange={handleChange}
-              className="input input-bordered w-full"
+              className="input input-bordered w-full input-glow"
             />
           </div>
 
@@ -165,7 +165,7 @@ const TaskForm = ({ onTaskAdded }) => {
               name="status"
               value={formData.status}
               onChange={handleChange}
-              className="select select-bordered w-full"
+              className="select select-bordered w-full input-glow"
             >
               <option value="pending">Pending</option>
               <option value="completed">Completed</option>
@@ -179,7 +179,7 @@ const TaskForm = ({ onTaskAdded }) => {
           <button
             type="submit"
             disabled={loading || !formData.title.trim()}
-            className="btn btn-primary w-full"
+            className="btn-brand w-full"
           >
             {loading ? (
               <>

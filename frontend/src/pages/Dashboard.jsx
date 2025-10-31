@@ -6,6 +6,8 @@ import React, { useState, useEffect } from "react";
 import { fetchTasks } from "../services/api";
 import StatsCard from "../components/StatsCard";
 import TaskCard from "../components/TaskCard";
+import { motion } from "framer-motion";
+import Loader from "../components/Loader";
 
 const Dashboard = () => {
   const [tasks, setTasks] = useState([]);
@@ -75,7 +77,12 @@ const Dashboard = () => {
   );
 
   return (
-    <div className="space-y-6">
+    <motion.div
+      className="space-y-6"
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-[#004AAD] via-[#0054C7] to-[#004AAD] rounded-2xl shadow-2xl p-12 text-white">
         <div className="max-w-4xl mx-auto text-center">
@@ -298,10 +305,7 @@ const Dashboard = () => {
           Recent Activity
         </h3>
         {loading ? (
-          <div className="text-center py-12">
-            <span className="loading loading-spinner loading-lg"></span>
-            <p className="mt-4 text-gray-500">Loading tasks...</p>
-          </div>
+          <Loader />
         ) : recentTasks.length > 0 ? (
           <div className="space-y-3">
             {recentTasks.map((task) => (
@@ -349,7 +353,7 @@ const Dashboard = () => {
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

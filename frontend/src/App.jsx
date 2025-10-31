@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Header from "./components/Header";
+import CustomCursor from "./components/CustomCursor";
+import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
 import StudentTasks from "./pages/StudentTasks";
 import TeacherPlanner from "./pages/TeacherPlanner";
@@ -27,17 +29,21 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-gray-100">
+    <div className="min-h-screen">
+      <CustomCursor />
       <Header activeTab={activeTab} setActiveTab={setActiveTab} />
-      <main className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {renderContent()}
-      </main>
+      <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 py-8 flex">
+        <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
+        <main className="flex-1">
+          {renderContent()}
+        </main>
+      </div>
       {/* Footer */}
-      <footer className="bg-white border-t-2 border-blue-100 py-6 mt-16">
+      <footer className="bg-white/90 border-t-2 border-blue-100 py-6 mt-16 backdrop-blur-sm">
         <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-2 md:space-y-0">
             <div className="text-sm text-gray-600 font-medium">
-              © 2024 i2Global | EduTrack LMS Task Tracker
+              © 2025 i2 Global | Illuminate to Innovate
             </div>
             <div className="flex items-center space-x-6 text-sm text-gray-500">
               <span className="flex items-center">

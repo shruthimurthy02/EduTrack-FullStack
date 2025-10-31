@@ -90,3 +90,5 @@ const FilterBar = ({ filters, setFilters }) => {
 };
 
 export default FilterBar;
+
+
